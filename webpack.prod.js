@@ -32,6 +32,14 @@ module.exports = merge(common, {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
-    new webpack.optimize.ModuleConcatenationPlugin()
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.[chunkhash].js',
+      minChunks (module) {
+        return module.context && module.context.indexOf('node_modules') >= 0
+      }
+    }),
+    new webpack.HashedModuleIdsPlugin()
   ]
 })
