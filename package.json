@@ -9,7 +9,6 @@
   "scripts": {
     "build": "webpack -p --config webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "lint": "standard 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andres Carreño",
