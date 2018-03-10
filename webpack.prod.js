@@ -2,7 +2,7 @@ const merge = require('webpack-merge')
 const common = require('./webpack.common.js')
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const MinifyPlugin = require('babel-minify-webpack-plugin')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = merge(common, {
   module: {
@@ -26,7 +26,7 @@ module.exports = merge(common, {
     ]
   },
   plugins: [
-    new MinifyPlugin(),
+    new UglifyJSPlugin(),
     new ExtractTextPlugin('[name].css')
   ]
 })
