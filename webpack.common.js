@@ -16,6 +16,7 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.js$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'standard-loader',
@@ -28,6 +29,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'babel-loader',
