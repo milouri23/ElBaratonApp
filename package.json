@@ -7,8 +7,33 @@
     "doc": "docs"
   },
   "scripts": {
+    "build": "webpack -p --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "lint": "standard 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Andres Carreño",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-minify-webpack-plugin": "^0.3.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.0.6",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "standard": "^11.0.0",
+    "standard-loader": "^6.0.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.2",
+    "webpack-merge": "^4.1.2"
+  }
 }
